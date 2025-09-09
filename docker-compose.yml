@@ -27,7 +27,7 @@ services:
       LOGO_URL: https://ck-itsolutions.nl/
       LOGO: '<img src="https://images.ck-itsolutions.nl/ckitsolutions/logo-light.svg" alt="CK IT Solutions" style="height: 60px; width: auto;">'
       LOGO_DARK: '<img src="https://images.ck-itsolutions.nl/ckitsolutions/logo-dark.svg" alt="CK IT Solutions" style="height: 60px; width: auto;">'
-      IPV4_ADDRESS: 146.103.47.24
+      IPV4_ADDRESS: 146.103.47.1
       IPV6_ADDRESS: 2a05:dfc1:5503::1
       MAPS_QUERY: Doetinchem
 

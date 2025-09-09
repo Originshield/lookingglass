@@ -64,7 +64,6 @@ const LG_METHODS = [
 
 // Define other looking glasses, this is useful if you have multiple networks and looking glasses;
 const LG_LOCATIONS = [
-    'InterDC Doetinchem' => 'https://doe.lg.ck-itsolutions.nl/',
 ];
 
 // Enable the iPerf info inside the speedtest block, set to false to disable;
