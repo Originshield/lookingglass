@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: docker/nginx/Dockerfile
     restart: unless-stopped
+    depends_on:
+      - php-fpm
 
   php-fpm:
     image: hybula/lookingglass-php:1
@@ -15,8 +17,6 @@ services:
       dockerfile: docker/php-fpm/Dockerfile
     restart: unless-stopped
     environment:
-      # For a better reference as to what these variables do, check out 'config.dist.php' or 'docker/php-fpm/src/config.php'.
-      # Please replace them with values that are relevant to your situation!
       LOCATION: Location
       FACILITY: Facility
       FACILITY_URL: http://localhost/
@@ -26,6 +26,7 @@ services:
       IPV4_ADDRESS: 127.0.0.1
       IPV6_ADDRESS: ::1
       MAPS_QUERY: Amsterdam
+
       # Pass these variables with any arbitrary value to disable the respective block.
       # DISABLE_BLOCK_NETWORK: 'true'
       # DISABLE_BLOCK_LOOKINGGLASS: 'true'
