@@ -30,13 +30,21 @@ services:
       IPV4_ADDRESS: 146.103.47.1
       IPV6_ADDRESS: 2a05:dfc1:5503::1
       MAPS_QUERY: Doetinchem
+      
+      # BGP Information
+      BGP_ASN: '212762'
+      BGP_ASN_NAME: CK IT Solutions
+      BGP_IPV4_PREFIXES: '146.103.47.0/24'
+      BGP_IPV6_PREFIXES: '2a05:dfc1:5500::/40'
+      BGP_LOOKING_GLASS_URL: 'https://lg.ck-itsolutions.nl'
+      BGP_PEERINGDB_URL: 'https://www.peeringdb.com/asn/212762'
 
       # Pass these variables with any arbitrary value to disable the respective block.
       # DISABLE_BLOCK_NETWORK: 'true'
       # DISABLE_BLOCK_LOOKINGGLASS: 'true'
       DISABLE_BLOCK_SPEEDTEST: 'false'
       # Uncomment to enable the custom block, which you can use to add something custom to the LG.
-      # ENABLE_CUSTOM_BLOCK: 'true'
+      ENABLE_CUSTOM_BLOCK: 'true'
       # Uncomment if you require visitors to accept the Terms of Use; the value should be a link to the terms.
       # LG_TERMS: http://localhost/
 
