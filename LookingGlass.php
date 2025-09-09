@@ -442,6 +442,11 @@ class LookingGlass
             // RHEL based systems;
             $ssPath = '/usr/sbin/ss';
         }
+        
+        // Check if ss command exists
+        if (!file_exists($ssPath)) {
+            return [];
+        }
 
         if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
             $ipSs = '['.$ip.']';
@@ -449,7 +454,10 @@ class LookingGlass
             $ipSs = $ip;
         }
 
-        $lines = shell_exec($ssPath.' -Hintp state established dst '.$ipSs);
+        $lines = shell_exec($ssPath.' -Hintp state established dst '.$ipSs.' 2>/dev/null');
+        if ($lines === null || trim($lines) === '') {
+            return [];
+        }
         $ss = [];
         $i = 0;
         $j = 0;
