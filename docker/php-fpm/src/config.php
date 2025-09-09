@@ -2,7 +2,7 @@
 use Hybula\LookingGlass;
 
 // Define the HTML title;
-const LG_TITLE = 'Looking Glass';
+const LG_TITLE = 'CK IT Solutions - Looking Glass';
 
 // Define a logo, this can be HTML too, see the other example for an image;
 define('LG_LOGO', getenv('LOGO'));
@@ -20,7 +20,7 @@ const LG_CHECK_LATENCY = true;
 // Define a custom CSS file which can be used to style the LG, set false to disable, else point to the CSS file;
 const LG_CSS_OVERRIDES = false;
 // Define <head> content, this could be JS, CSS or meta tags;
-const LG_CUSTOM_HEAD = false;
+const LG_CUSTOM_HEAD = '<link rel="icon" type="image/svg+xml" href="https://images.ck-itsolutions.nl/ckitsolutions/favicon.svg">';
 
 // Enable or disable blocks/parts of the LG, pass these environment variables with any value to disable them;
 define('LG_BLOCK_NETWORK', !getenv('DISABLE_BLOCK_NETWORK'));
@@ -64,9 +64,7 @@ const LG_METHODS = [
 
 // Define other looking glasses, this is useful if you have multiple networks and looking glasses;
 const LG_LOCATIONS = [
-    'Location A' => 'https://github.com/hybula/lookingglass/',
-    'Location B' => 'https://github.com/hybula/lookingglass/',
-    'Location C' => 'https://github.com/hybula/lookingglass/',
+    'InterDC Doetinchem' => 'https://doe.lg.ck-itsolutions.nl/',
 ];
 
 // Enable the iPerf info inside the speedtest block, set to false to disable;
