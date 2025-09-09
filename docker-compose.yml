@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     depends_on:
       - php-fpm
+    networks:
+      - lookingglass
 
   php-fpm:
     image: hybula/lookingglass-php:1
@@ -16,6 +18,8 @@ services:
       context: .
       dockerfile: docker/php-fpm/Dockerfile
     restart: unless-stopped
+    networks:
+      - lookingglass
     environment:
       LOCATION: Location
       FACILITY: Facility
@@ -44,3 +48,7 @@ services:
   #   tty: true
   #   stdin_open: true
   #   restart: unless-stopped
+
+networks:
+  lookingglass:
+    driver: bridge
